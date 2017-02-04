@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/rlright"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:background="#2b2b2b"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/img_camera"
+                android:layout_width="70dp"
+                android:layout_height="70dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+          >
+
+            <Button
+                android:id="@+id/btn_takephoto"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="拍照" />
+            <Button
+                android:id="@+id/btn_duijiao"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="对焦" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <SurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rlright" />
+
+    <ImageView
+        android:id="@+id/img_icloud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@mipmap/ic_launcher" />
+</RelativeLayout>
